@@ -26,7 +26,14 @@ module.exports = {
                     title: 'git',
                     collapsable: true,
                     children: [
-                       'git/常用命令'
+                       'git/git常用命令'
+                    ]
+                },
+                {
+                    title: 'linux',
+                    collapsable: true,
+                    children: [
+                       'linux/linux常用命令'
                     ]
                 }
             ]
