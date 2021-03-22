@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: 石志凯的技术博客
+heroText: 石志凯的技术杂货铺
 tagline: web前端工程师
 actionText: 记录文档 →
 actionLink: /file/
