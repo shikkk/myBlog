@@ -3,7 +3,8 @@ module.exports = {
     description: '开发笔记',
     themeConfig: {
         nav: [
-            { text: '首页', link: '/' }
+            { text: '首页', link: '/' },
+            { text: '技术货架', link: '/file/' }
         ],
         sidebar: {
             '/file/': [
@@ -15,7 +16,27 @@ module.exports = {
                     ]
                 },
                 {
-                    title: 'vue',
+                    title: 'Html&Css',
+                    collapsable: true,
+                    children: [
+                        'HtmlAndCss/等比缩放',
+                        'HtmlAndCss/水平垂直居中'
+                    ]
+                },
+                {
+                    title: 'Js',
+                    collapsable: true,
+                    children: [
+                        'js/call&apply&bind',
+                        'js/数组扁平化',
+                        'js/数组去重',
+                        'js/数组旋转',
+                        'js/深拷贝',
+                        'js/防抖和节流'
+                    ]
+                },
+                {
+                    title: 'Vue',
                     collapsable: true,
                     children: [
                        'vue/Vue',
@@ -23,14 +44,15 @@ module.exports = {
                     ]
                 },
                 {
-                    title: 'git',
+                    title: 'Git',
                     collapsable: true,
                     children: [
-                       'git/git常用命令'
+                        'git/git常用命令',
+                        'git/github绑定ssh'
                     ]
                 },
                 {
-                    title: 'linux',
+                    title: 'Linux',
                     collapsable: true,
                     children: [
                        'linux/linux常用命令'

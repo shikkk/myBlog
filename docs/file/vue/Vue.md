@@ -51,6 +51,13 @@
      2. 更多的服务器负载：在 Node.js 中渲染完整的应用程序，显然会比仅仅提供静态文件的 server 更加大量占用CPU 资源，因此如果你预料在高流量环境下使用，请准备相应的服务器负载，并明智地采用缓存策略。
 
     1. 预渲染： prerender-spa-plugin 
+11. polyfill (兼容低版本浏览器拆件)
+  * 包很大，不建议直接项目中下载，建议直接引入js
+  * <https://polyfill.io/v3/url-builder/>
+  * https://polyfill.io/v3/polyfill.min.js(引入js)
+
+12. 页面性能检测工具
+  * <https://developers.google.com/speed/pagespeed/insights/>
 
 ## 二、 Webpack层面的优化
 
