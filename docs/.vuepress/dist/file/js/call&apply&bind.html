@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>call、apply、bind | 石志凯的技术杂货铺</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="开发笔记">
+    
+    <link rel="preload" href="/assets/css/0.styles.35bcedcf.css" as="style"><link rel="preload" href="/assets/js/app.d79f857e.js" as="script"><link rel="preload" href="/assets/js/2.1662d66b.js" as="script"><link rel="preload" href="/assets/js/14.66a503ab.js" as="script"><link rel="prefetch" href="/assets/js/10.252f4ba6.js"><link rel="prefetch" href="/assets/js/11.396c382f.js"><link rel="prefetch" href="/assets/js/12.1f9f9e1e.js"><link rel="prefetch" href="/assets/js/13.7289f9a5.js"><link rel="prefetch" href="/assets/js/15.4ad2308f.js"><link rel="prefetch" href="/assets/js/16.82308a4c.js"><link rel="prefetch" href="/assets/js/17.0ec3c5d0.js"><link rel="prefetch" href="/assets/js/18.76360085.js"><link rel="prefetch" href="/assets/js/19.2ddb4511.js"><link rel="prefetch" href="/assets/js/20.cefa46b6.js"><link rel="prefetch" href="/assets/js/21.ff7c365b.js"><link rel="prefetch" href="/assets/js/22.672fefc2.js"><link rel="prefetch" href="/assets/js/3.558e4e47.js"><link rel="prefetch" href="/assets/js/4.09ee8a39.js"><link rel="prefetch" href="/assets/js/5.30fca801.js"><link rel="prefetch" href="/assets/js/6.498ab014.js"><link rel="prefetch" href="/assets/js/7.3822cadf.js"><link rel="prefetch" href="/assets/js/8.31319317.js"><link rel="prefetch" href="/assets/js/9.08eac3e2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.35bcedcf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">石志凯的技术杂货铺</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/file/" class="nav-link router-link-active">
+  技术货架
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/file/" class="nav-link router-link-active">
+  技术货架
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>前言</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/file/" aria-current="page" class="sidebar-link">日常开发技术整理</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Html&amp;Css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Js</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/file/js/call&amp;apply&amp;bind.html" aria-current="page" class="active sidebar-link">call、apply、bind</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/file/js/call&amp;apply&amp;bind.html#概念及异同点" class="sidebar-link">概念及异同点</a></li><li class="sidebar-sub-header"><a href="/file/js/call&amp;apply&amp;bind.html#手写call、apply、bind" class="sidebar-link">手写call、apply、bind</a></li></ul></li><li><a href="/file/js/数组扁平化.html" class="sidebar-link">数组扁平化</a></li><li><a href="/file/js/数组去重.html" class="sidebar-link">数组去重</a></li><li><a href="/file/js/数组旋转.html" class="sidebar-link">数组旋转</a></li><li><a href="/file/js/深拷贝.html" class="sidebar-link">深拷贝和浅拷贝</a></li><li><a href="/file/js/防抖和节流.html" class="sidebar-link">防抖和节流</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="call、apply、bind"><a href="#call、apply、bind" class="header-anchor">#</a> call、apply、bind</h1> <h2 id="概念及异同点"><a href="#概念及异同点" class="header-anchor">#</a> 概念及异同点</h2> <ol><li>call、apply、bind都是改变函数this指向的</li> <li>call、apply改变this的同时会把函数执行了</li> <li>bind只负责改变this指向，其他不做任何操作</li> <li>call入参是逐个入参；apply入参是以数组的形式入参</li></ol> <h2 id="手写call、apply、bind"><a href="#手写call、apply、bind" class="header-anchor">#</a> 手写call、apply、bind</h2> <h3 id="call方法实现"><a href="#call方法实现" class="header-anchor">#</a> call方法实现</h3> <ul><li>简单实现</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">myCall</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span> <span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//把函数挂到目标对象上（这里的 this 就是我们要改造的的那个函数）</span>
+    context<span class="token punctuation">.</span>func <span class="token operator">=</span> <span class="token keyword">this</span>
+    <span class="token comment">//执行函数</span>
+    context<span class="token punctuation">.</span><span class="token function">func</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span>
+    <span class="token comment">// 删除 step1 中挂到目标对象上的函数，把目标对象”完璧归赵”</span>
+    <span class="token keyword">delete</span> context<span class="token punctuation">.</span>func
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>完整实现</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code> <span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">myCall</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span> <span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+      context <span class="token operator">=</span> context <span class="token operator">||</span> window <span class="token comment">// 默认为 window </span>
+      <span class="token keyword">const</span> key <span class="token operator">=</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">'callKey'</span><span class="token punctuation">)</span> <span class="token comment">// 避免覆盖 ctx 原有的属性 </span>
+      context<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span> 
+      <span class="token keyword">const</span> result <span class="token operator">=</span> context<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token comment">// 函数返回值 </span>
+      <span class="token keyword">delete</span> context<span class="token punctuation">[</span>key<span class="token punctuation">]</span> 
+      <span class="token keyword">return</span> result 
+    <span class="token punctuation">}</span>
+</code></pre></div><h3 id="apply方法实现"><a href="#apply方法实现" class="header-anchor">#</a> apply方法实现</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code> <span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">myApply</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span> arr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>arr <span class="token keyword">instanceof</span> <span class="token class-name">Array</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token comment">// 参数类型检验 </span>
+      context <span class="token operator">=</span> context <span class="token operator">||</span> window <span class="token comment">// 默认为 window </span>
+      <span class="token keyword">const</span> key <span class="token operator">=</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">'applyKey'</span><span class="token punctuation">)</span> <span class="token comment">// 避免覆盖 ctx 原有的属性 </span>
+      context<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span> 
+      <span class="token keyword">const</span> result <span class="token operator">=</span> context<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token operator">...</span>arr<span class="token punctuation">)</span> <span class="token comment">// 函数返回值 </span>
+      <span class="token keyword">delete</span> context<span class="token punctuation">[</span>key<span class="token punctuation">]</span> 
+      <span class="token keyword">return</span> result 
+    <span class="token punctuation">}</span>
+</code></pre></div><h3 id="bind方法实现"><a href="#bind方法实现" class="header-anchor">#</a> bind方法实现</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">myBind</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span> <span class="token operator">...</span>rest</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+      context <span class="token operator">=</span> context <span class="token operator">||</span> window 
+      <span class="token keyword">const</span> fn <span class="token operator">=</span> <span class="token keyword">this</span> 
+      <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">return</span> fn<span class="token punctuation">.</span><span class="token function">myCall</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> <span class="token operator">...</span>rest<span class="token punctuation">)</span> 
+      <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span>
+</code></pre></div><ul><li>函数简单调用</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> me <span class="token operator">=</span> <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">'zk'</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">showName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+showName<span class="token punctuation">.</span><span class="token function">myCall</span><span class="token punctuation">(</span>me<span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/file/HtmlAndCss/flex布局.html" class="prev">
+        flex布局
+      </a></span> <span class="next"><a href="/file/js/数组扁平化.html">
+        数组扁平化
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d79f857e.js" defer></script><script src="/assets/js/2.1662d66b.js" defer></script><script src="/assets/js/14.66a503ab.js" defer></script>
+  </body>
+</html>

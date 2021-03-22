@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>防抖和节流 | 石志凯的技术杂货铺</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="开发笔记">
+    
+    <link rel="preload" href="/assets/css/0.styles.35bcedcf.css" as="style"><link rel="preload" href="/assets/js/app.d79f857e.js" as="script"><link rel="preload" href="/assets/js/2.1662d66b.js" as="script"><link rel="preload" href="/assets/js/19.2ddb4511.js" as="script"><link rel="prefetch" href="/assets/js/10.252f4ba6.js"><link rel="prefetch" href="/assets/js/11.396c382f.js"><link rel="prefetch" href="/assets/js/12.1f9f9e1e.js"><link rel="prefetch" href="/assets/js/13.7289f9a5.js"><link rel="prefetch" href="/assets/js/14.66a503ab.js"><link rel="prefetch" href="/assets/js/15.4ad2308f.js"><link rel="prefetch" href="/assets/js/16.82308a4c.js"><link rel="prefetch" href="/assets/js/17.0ec3c5d0.js"><link rel="prefetch" href="/assets/js/18.76360085.js"><link rel="prefetch" href="/assets/js/20.cefa46b6.js"><link rel="prefetch" href="/assets/js/21.ff7c365b.js"><link rel="prefetch" href="/assets/js/22.672fefc2.js"><link rel="prefetch" href="/assets/js/3.558e4e47.js"><link rel="prefetch" href="/assets/js/4.09ee8a39.js"><link rel="prefetch" href="/assets/js/5.30fca801.js"><link rel="prefetch" href="/assets/js/6.498ab014.js"><link rel="prefetch" href="/assets/js/7.3822cadf.js"><link rel="prefetch" href="/assets/js/8.31319317.js"><link rel="prefetch" href="/assets/js/9.08eac3e2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.35bcedcf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">石志凯的技术杂货铺</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/file/" class="nav-link router-link-active">
+  技术货架
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/file/" class="nav-link router-link-active">
+  技术货架
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>前言</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/file/" aria-current="page" class="sidebar-link">日常开发技术整理</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Html&amp;Css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Js</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/file/js/call&amp;apply&amp;bind.html" class="sidebar-link">call、apply、bind</a></li><li><a href="/file/js/数组扁平化.html" class="sidebar-link">数组扁平化</a></li><li><a href="/file/js/数组去重.html" class="sidebar-link">数组去重</a></li><li><a href="/file/js/数组旋转.html" class="sidebar-link">数组旋转</a></li><li><a href="/file/js/深拷贝.html" class="sidebar-link">深拷贝和浅拷贝</a></li><li><a href="/file/js/防抖和节流.html" class="active sidebar-link">防抖和节流</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/file/js/防抖和节流.html#throttle-节流" class="sidebar-link">throttle 节流</a></li><li class="sidebar-sub-header"><a href="/file/js/防抖和节流.html#debounce防抖" class="sidebar-link">debounce防抖</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="防抖和节流"><a href="#防抖和节流" class="header-anchor">#</a> 防抖和节流</h1> <p>在浏览器各种各样的事件中，有些容易过度频繁触发的事件而导致性能问题。
+比如：</p> <ul><li>scroll 事件</li> <li>resize 事件</li> <li>鼠标事件（mousemove、mouseover）</li> <li>键盘事件（keyup、keydown）</li> <li>拖拽事件</li></ul> <h2 id="throttle-节流"><a href="#throttle-节流" class="header-anchor">#</a> throttle 节流</h2> <h4 id="节流函数原理-规定在一个单位时间内-只能触发一次函数。如果这个单位时间内触发多次函数-只有一次生效"><a href="#节流函数原理-规定在一个单位时间内-只能触发一次函数。如果这个单位时间内触发多次函数-只有一次生效" class="header-anchor">#</a> 节流函数原理： 规定在一个单位时间内，只能触发一次函数。如果这个单位时间内触发多次函数，只有一次生效</h4> <ol><li>适用场景：</li></ol> <ul><li>拖拽场景：固定时间内只执行一次，防止超高频次触发位置变动</li> <li>缩放场景：监控浏览器resize</li> <li>动画场景：避免短时间内多次触发动画引起性能问题</li></ul> <ol start="2"><li>实现一个拖拽</li></ol> <ul><li>拖拽一个元素时，要随时拿到该元素被拖拽的位置</li> <li>直接用drag事件，会频繁触发，很容易导致卡顿</li> <li>实现节流：无论拖拽速度多快，都会每隔一定事件触发一次</li></ul> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">#div1</span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #000<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>div1<span class="token punctuation">&quot;</span></span> <span class="token attr-name">draggable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 简化版</span>
+<span class="token keyword">const</span> div1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'div1'</span><span class="token punctuation">)</span>
+<span class="token keyword">function</span> <span class="token function">throttle</span> <span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> time <span class="token operator">=</span> <span class="token number">100</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+
+    timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span>
+      timer <span class="token operator">=</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> time<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+div1<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'drag'</span><span class="token punctuation">,</span> <span class="token function">throttle</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>offsetX<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="debounce防抖"><a href="#debounce防抖" class="header-anchor">#</a> debounce防抖</h2> <h4 id="防抖函数原理-在事件被触发n秒后再执行回调-如果在这n秒内又被触发-则重新计时。"><a href="#防抖函数原理-在事件被触发n秒后再执行回调-如果在这n秒内又被触发-则重新计时。" class="header-anchor">#</a> 防抖函数原理： 在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。</h4> <ol><li>适用场景：</li></ol> <ul><li>按钮提交场景：防止多次提交</li> <li>输入框时间</li></ul> <ol start="2"><li>实现一个输入框频繁触发</li></ol> <ul><li>监听一个输入框的，文字变化后触发change事件</li> <li>直接用keyup事件，则会频发触发change事件</li> <li>防抖：用户输入结束或暂停时，才会触发change事件</li></ul> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 简化版</span>
+<span class="token keyword">const</span> input <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token keyword">function</span> <span class="token function">debounce</span> <span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> time <span class="token operator">=</span> <span class="token number">500</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span>
+      timer <span class="token operator">=</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> time<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+input<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'keyup'</span><span class="token punctuation">,</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>input<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">600</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/file/js/深拷贝.html" class="prev">
+        深拷贝和浅拷贝
+      </a></span> <span class="next"><a href="/file/vue/Vue.html">
+        Vue性能优化
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d79f857e.js" defer></script><script src="/assets/js/2.1662d66b.js" defer></script><script src="/assets/js/19.2ddb4511.js" defer></script>
+  </body>
+</html>
