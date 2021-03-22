@@ -20,7 +20,8 @@ module.exports = {
                     collapsable: true,
                     children: [
                         'HtmlAndCss/等比缩放',
-                        'HtmlAndCss/水平垂直居中'
+                        'HtmlAndCss/水平垂直居中',
+                        'HtmlAndCss/flex布局',
                     ]
                 },
                 {
