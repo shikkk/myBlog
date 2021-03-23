@@ -29,6 +29,7 @@ module.exports = {
                     collapsable: true,
                     children: [
                         'js/call&apply&bind',
+                        'js/数组常用方法',
                         'js/数组扁平化',
                         'js/数组去重',
                         'js/数组旋转',
@@ -50,6 +51,13 @@ module.exports = {
                     children: [
                         'git/git常用命令',
                         'git/github绑定ssh'
+                    ]
+                },
+                {
+                    title: 'Http',
+                    collapsable: true,
+                    children: [
+                        'http/http'
                     ]
                 },
                 {
