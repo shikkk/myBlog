@@ -1,6 +1,9 @@
 module.exports = {
     title: '石志凯的技术杂货铺',
     description: '开发笔记',
+    markdown: {
+        lineNumbers: true
+    },
     themeConfig: {
         nav: [
             { text: '首页', link: '/' },
@@ -34,13 +37,17 @@ module.exports = {
                         'js/数组去重',
                         'js/数组旋转',
                         'js/深拷贝',
-                        'js/防抖和节流'
+                        'js/防抖和节流',
+                        'js/promise',
+                        'js/实现promise'
                     ]
                 },
                 {
                     title: 'Vue',
                     collapsable: true,
                     children: [
+                        'vue/vue2使用',
+                        'vue/vue2生命周期',
                        'vue/Vue',
                        'vue/数据双向绑定'
                     ]
