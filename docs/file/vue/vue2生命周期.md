@@ -23,7 +23,7 @@ destoryed|组件销毁后调用|当前组件已被删除，销毁监听事件，
 
 ## 父子组件生命周期执行顺序
 
-父子组件依次：父beforeCreate -> 父created -> 父beforeMount -> 子beforeCreate -> 子created -> 子beforeMount -> 子mounted -> 父mounted
+* 父子组件依次：父beforeCreate -> 父created -> 父beforeMount -> 子beforeCreate -> 子created -> 子beforeMount -> 子mounted -> 父mounted
 ```
 beforeCreate:我是父组件的钩子
 created:我是父组件的钩子
@@ -34,3 +34,6 @@ beforeMount:我是子组件1的钩子
 mounted:我是子组件1的钩子
 mounted:我是父组件的钩子
 ```
+
+* 父子更新过程：父beforeUpdate->子beforeUpdate->子updated->父updated
+* 父子销毁过程：父beforeDestroy->子beforeDestroy->子destroyed->父destroyed

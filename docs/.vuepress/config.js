@@ -39,7 +39,8 @@ module.exports = {
                         'js/深拷贝',
                         'js/防抖和节流',
                         'js/promise',
-                        'js/实现promise'
+                        'js/实现promise',
+                        'js/实现map方法'
                     ]
                 },
                 {
@@ -50,6 +51,15 @@ module.exports = {
                         'vue/vue2生命周期',
                        'vue/Vue',
                        'vue/数据双向绑定'
+                    ]
+                },
+                {
+                    title: '算法',
+                    collapsable: true,
+                    children: [
+                        '算法/排序',
+                        '算法/斐波那契',
+                        '算法/数据结构'
                     ]
                 },
                 {
