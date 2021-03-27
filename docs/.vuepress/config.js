@@ -83,6 +83,13 @@ module.exports = {
                     children: [
                        'linux/linux常用命令'
                     ]
+                },
+                {
+                    title: '面试题',
+                    collapsable: true,
+                    children: [
+                        '面试题/经典面试题'
+                    ]
                 }
             ]
         }
