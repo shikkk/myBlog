@@ -52,6 +52,13 @@ module.exports = {
                        'vue/Vue',
                        'vue/数据双向绑定'
                     ]
+                },{
+                    title: 'Node',
+                    collapsable: true,
+                    children: [
+                        'node/CORS',
+                        'node/nginx'
+                    ]
                 },
                 {
                     title: '算法',
