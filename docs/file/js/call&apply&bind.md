@@ -9,7 +9,9 @@
 ## 手写call、apply、bind
 
 ### call方法实现
-
+call表现出的特性有俩点
+1. call可以被所有函数继承的，所以call方法应该被定义在Function.prototype上
+2. 改变 this 的指向，将 this 绑到第一个入参指定的的对象上去
 * 简单实现
 ```javascript
 Function.prototype.myCall = function (context, ...args) {

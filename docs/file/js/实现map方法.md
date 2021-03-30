@@ -17,9 +17,10 @@ Array.prototype.myMap = function(fn, thisArgs) {
 
 ## 利用reduce实现
 ```javascript
-Array.prototype.myMap = function(cb) {
+Array.prototype.myMap = function(cb, thisArgs) {
+  let thisArgs = thisArgs || null
   return this.reduce((prev,cur,index,arr)=>{
-    prev.push(cb(cur, index, arr))
+    prev.push(cb.call(thisArgs,cur, index, arr))
     return prev
   },[])
 }

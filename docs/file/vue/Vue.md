@@ -40,7 +40,7 @@
     })
 8. 第三方插件的按需引入
    * 需要的组件引入项目，不需要的不引入。使用 babel-plugin-component插件
-9. 优化无线列表性能
+9. 优化无限列表性能
    * 使用vue-virtual-scroll-list 和 vue-virtual-scroller
 10. 服务端渲染ssr和预渲染
    * 优点：
