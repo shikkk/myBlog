@@ -26,3 +26,68 @@ EventBus.$on("aMsg", (msg) => {
 // 移除事件
 EventBus.$off('aMsg', {})
 ```
+## provide/inject
+#### provide/ inject 是vue2.2.0新增的api, 简单来说就是父组件中通过provide来提供变量, 然后再子组件中通过inject来注入变量
+假设有三组件，A, B, C 三个组件
+```vue
+// A.vue
+<template>
+  <div>
+	<comB></comB>
+  </div>
+</template>
+<script>
+  import comB from '../comB.vue'
+  export default {
+    name: "A",
+    provide: {
+      for: "demo"
+    },
+    components:{
+      comB
+    }
+  }
+</script>
+
+// B.vue
+<template>
+  <div>
+    {{demo}}
+    <comC></comC>
+  </div>
+</template>
+
+<script>
+  import comC from '../comC.vue'
+  export default {
+    name: "B",
+    inject: ['for'],
+    data() {
+      return {
+        demo: this.for
+      }
+    },
+    components: {
+      comC
+    }
+  }
+</script>
+
+// C.vue
+<template>
+  <div>
+    {{demo}}
+  </div>
+</template>
+<script>
+  export default {
+    name: "C",
+    inject: ['for'],
+    data() {
+      return {
+        demo: this.for
+      }
+    }
+  }
+</script>
+```
