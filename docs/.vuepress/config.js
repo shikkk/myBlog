@@ -70,7 +70,8 @@ module.exports = {
                     collapsable: true,
                     children: [
                         'node/CORS',
-                        'node/nginx'
+                        'node/nginx',
+                        'node/mySQL'
                     ]
                 },
                 {
@@ -94,7 +95,8 @@ module.exports = {
                     title: 'Http',
                     collapsable: true,
                     children: [
-                        'http/http'
+                        'http/http',
+                        'http/浏览器缓存'
                     ]
                 },
                 {
