@@ -70,7 +70,8 @@ module.exports = {
                     collapsable: true,
                     children: [
                         'node/CORS',
-                        'node/nginx'
+                        'node/nginx',
+                        'node/mySQL'
                     ]
                 },
                 {
@@ -94,7 +95,8 @@ module.exports = {
                     title: 'Http',
                     collapsable: true,
                     children: [
-                        'http/http'
+                        'http/http',
+                        'http/浏览器缓存'
                     ]
                 },
                 {
@@ -105,11 +107,11 @@ module.exports = {
                     ]
                 },
                 {
-                    title: '面试题',
+                    title: '其他',
                     collapsable: true,
                     children: [
-                        '面试题/经典面试题',
-                        '面试题/问答题'
+                        'other/经典面试题',
+                        'other/问答题'
                     ]
                 }
             ]
