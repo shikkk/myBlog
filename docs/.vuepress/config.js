@@ -107,11 +107,11 @@ module.exports = {
                     ]
                 },
                 {
-                    title: '面试题',
+                    title: '其他',
                     collapsable: true,
                     children: [
-                        '面试题/经典面试题',
-                        '面试题/问答题'
+                        'other/经典面试题',
+                        'other/问答题'
                     ]
                 }
             ]
