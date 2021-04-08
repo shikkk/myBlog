@@ -8,7 +8,8 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: '首页', link: '/' },
-            { text: '技术货架', link: '/file/' }
+            { text: '技术货架', link: '/file/' },
+            { text: '货铺老板', link: '/me/' }
         ],
         sidebar: {
             '/file/': [
@@ -45,7 +46,8 @@ module.exports = {
                         'js/防抖和节流',
                         'js/promise',
                         'js/实现promise',
-                        'js/实现map方法'
+                        'js/实现map方法',
+                        'js/webRoute'
                     ]
                 },
                 {
