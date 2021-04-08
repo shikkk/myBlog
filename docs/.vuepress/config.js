@@ -1,7 +1,7 @@
 module.exports = {
     title: '石志凯的技术杂货铺',
     keywords: '石志凯，szk、志凯、vue、react、js、html、css、前端',
-    description: '开发笔记',
+    description: '石志凯，石志凯的博客，szk、志凯、vue、react、js、html、css、前端',
     markdown: {
         lineNumbers: true
     },
