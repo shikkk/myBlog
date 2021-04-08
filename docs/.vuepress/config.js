@@ -1,5 +1,6 @@
 module.exports = {
     title: '石志凯的技术杂货铺',
+    keywords: '石志凯，szk、志凯、vue、react、js、html、css、前端',
     description: '开发笔记',
     markdown: {
         lineNumbers: true
@@ -52,6 +53,7 @@ module.exports = {
                     collapsable: true,
                     children: [
                         'vue/vue2使用',
+                        'vue/vue3',
                         'vue/vue2生命周期',
                        'vue/Vue',
                        'vue/数据双向绑定'
