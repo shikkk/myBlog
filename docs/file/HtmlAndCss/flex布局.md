@@ -56,8 +56,9 @@
     4、flex-shrink 数值  收缩
     5、flex-basis  //200px   设置item主轴宽度
     6、flex  flex-grow|| flex-shrink || flex-basis 组合使用
-        无单位数值：代表   flex-grow 
-        有单位数值  代表  flex-basis
+        无单位数值:flex-grow: <number>; default 0   放大属性
+                  flex-shrink:<number>; default 1 伸缩比例，0为不伸缩
+        有单位数值 flex-basis: default auto 
         */
 }
 .item1{

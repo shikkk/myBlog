@@ -9,7 +9,7 @@ module.exports = {
         nav: [
             { text: '首页', link: '/' },
             { text: '技术货架', link: '/file/' },
-            { text: '货铺老板', link: '/me/' }
+            // { text: '货铺老板', link: '/me/' }
         ],
         sidebar: {
             '/file/': [
@@ -27,6 +27,7 @@ module.exports = {
                         'HtmlAndCss/CSS选择器的权重',
                         'HtmlAndCss/等比缩放',
                         'HtmlAndCss/水平垂直居中',
+                        'HtmlAndCss/columnsAuto',
                         'HtmlAndCss/flex布局',
                     ]
                 },
@@ -100,7 +101,8 @@ module.exports = {
                     collapsable: true,
                     children: [
                         'http/http',
-                        'http/浏览器缓存'
+                        'http/浏览器缓存',
+                        'http/TCP&UDP'
                     ]
                 },
                 {
