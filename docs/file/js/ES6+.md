@@ -190,3 +190,18 @@ str.endsWith('shi') // false
 const str = 'shi'
 console.log(str.repeat(3)) //shishishi
 ```
+## 7.箭头函数
+```javascript
+function getValue() {
+  console.log('222')
+}
+// 变为箭头函数
+const getValue = () => {
+  console.log('222')
+}
+```
+* 箭头函数和普通函数的区别
+    1. 箭头函数是匿名函数，不能作为构造函数，不能使用`new`
+    2. 箭头函数不绑定`arguments`,而是...运算符接收
+    3. 箭头函数的this指向上下文（window）任何方法都改变不了他的指向（如call，bind，apply），普通函数指向调用他的对象
+    4. 箭头函数没有原型属性
