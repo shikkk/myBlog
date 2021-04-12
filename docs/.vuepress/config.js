@@ -59,7 +59,8 @@ module.exports = {
                         'vue/vue3',
                         'vue/vue2生命周期',
                        'vue/Vue',
-                       'vue/数据双向绑定'
+                       'vue/数据双向绑定',
+                        'vue/vDom',
                     ]
                 },
                 {
