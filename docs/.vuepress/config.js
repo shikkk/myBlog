@@ -61,6 +61,7 @@ module.exports = {
                        'vue/Vue',
                        'vue/数据双向绑定',
                         'vue/vDom',
+                        'vue/templateUse',
                     ]
                 },
                 {

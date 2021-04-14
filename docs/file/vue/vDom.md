@@ -292,3 +292,20 @@ with(this){
 const res = compiler.compile(template)
 console.log(res.render)
 ```
+
+## 渲染过程
+1. 解析模板（template）为`render`函数（vue-loader）
+    * 解析模板时同时触发了`getter`方法
+    * 如下：
+```javascript
+let template = `<p>{{msg}}</p>`
+// with(this){return _c('p',[_v(_s(msg))])}
+```
+2. 触发响应式，监听`data`属性`getter` `setter`方法
+3. 执行`render`函数，生成vnode，执行patch（ele，vnode）
+
+## 更新过程
+1. 修改data，触发setter（此前在getter中已被监听）
+2. 重新执行render函数，生成newVnode
+3. 执行patch（vnode，newVnode）新旧node对比
+4. 生成新页面
