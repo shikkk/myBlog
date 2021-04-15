@@ -91,3 +91,83 @@ EventBus.$off('aMsg', {})
   }
 </script>
 ```
+## $nextTick
+* data改变后dom不会立刻渲染
+* nextTick解决数据更新后对最新dom操作的方法
+```vue
+<template>
+    <ul ref="ul1">
+        <li v-for="item in list" :key="item"></li>
+    </ul>
+    <button @click="addItem">添加</button>
+</template>
+<script>
+export default {
+    name: 'demo',
+    data() {
+        return {
+            list: ['s', 'z', 'k']
+        }   
+    },
+    methods: {
+        addItem () {
+            this.list.push('web')
+            // 获取dom元素长度
+            let ulElm = this.$refs.ul1
+            // 每次点击打印的都不是最新的li长度
+            console.log(ulElm.childNodes.length) // 打印 3
+           // 如果想获取最新的dom li的长度$nextTick
+            this.$nextTick(() => {
+                 // let ulElm = this.$refs.ul1
+                // 每次点击打印的都是最新的li长度
+                // console.log(ulElm.childNodes.length) // 打印 4
+            })
+        }   
+    }
+}
+</script>
+```
+## 自定义v-model
+```vue
+<!--app.vue-->
+<template>
+    <customInput v-model="value">添加</customInput>
+</template>
+<script>
+export default {
+    name: 'demo',
+    data() {
+        return {
+            value: 'szk'
+        }   
+    }
+}
+</script>
+```
+```vue
+<!--customInput.vue-->
+<template>
+    <input type="text" 
+           :value="iptVal" 
+           @input="$emit('change', $event.target.value)" 
+    />
+</template>
+<script>
+export default {
+    name: 'customInput',
+    model: {
+        prop: 'iptVal',// 对应props中的text
+        event: 'change'
+    },
+    props: {
+        iptVal: String,
+        default: ''
+    },
+    data() {
+        return {
+            value: 'szk'
+        }   
+    }
+}
+</script>
+```

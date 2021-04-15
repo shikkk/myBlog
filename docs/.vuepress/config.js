@@ -62,6 +62,7 @@ module.exports = {
                        'vue/数据双向绑定',
                         'vue/vDom',
                         'vue/templateUse',
+                        'vue/$set()',
                     ]
                 },
                 {
@@ -76,6 +77,7 @@ module.exports = {
                     title: 'Node',
                     collapsable: true,
                     children: [
+                        'node/spider',
                         'node/CORS',
                         'node/nginx',
                         'node/mySQL'
