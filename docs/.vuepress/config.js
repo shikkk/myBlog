@@ -6,6 +6,7 @@ module.exports = {
         lineNumbers: true
     },
     themeConfig: {
+        lastUpdated: "最后更新时间",
         nav: [
             { text: '首页', link: '/' },
             { text: '技术货架', link: '/file/' },
