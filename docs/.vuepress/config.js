@@ -64,6 +64,7 @@ module.exports = {
                         'vue/vDom',
                         'vue/templateUse',
                         'vue/$set()',
+                        'vue/routeUse',
                     ]
                 },
                 {
