@@ -1,13 +1,16 @@
 module.exports = {
     title: '石志凯的技术杂货铺',
-    description: '开发笔记',
+    keywords: '石志凯，szk、志凯、vue、react、js、html、css、前端',
+    description: '石志凯，石志凯的博客，szk、志凯、vue、react、js、html、css、前端',
     markdown: {
         lineNumbers: true
     },
     themeConfig: {
+        lastUpdated: "最后更新时间",
         nav: [
             { text: '首页', link: '/' },
-            { text: '技术货架', link: '/file/' }
+            { text: '技术货架', link: '/file/' },
+            // { text: '货铺老板', link: '/me/' }
         ],
         sidebar: {
             '/file/': [
@@ -25,6 +28,7 @@ module.exports = {
                         'HtmlAndCss/CSS选择器的权重',
                         'HtmlAndCss/等比缩放',
                         'HtmlAndCss/水平垂直居中',
+                        'HtmlAndCss/columnsAuto',
                         'HtmlAndCss/flex布局',
                     ]
                 },
@@ -44,7 +48,8 @@ module.exports = {
                         'js/防抖和节流',
                         'js/promise',
                         'js/实现promise',
-                        'js/实现map方法'
+                        'js/实现map方法',
+                        'js/webRoute'
                     ]
                 },
                 {
@@ -52,9 +57,14 @@ module.exports = {
                     collapsable: true,
                     children: [
                         'vue/vue2使用',
+                        'vue/vue3',
                         'vue/vue2生命周期',
                        'vue/Vue',
-                       'vue/数据双向绑定'
+                       'vue/数据双向绑定',
+                        'vue/vDom',
+                        'vue/templateUse',
+                        'vue/$set()',
+                        'vue/routeUse',
                     ]
                 },
                 {
@@ -69,6 +79,7 @@ module.exports = {
                     title: 'Node',
                     collapsable: true,
                     children: [
+                        'node/spider',
                         'node/CORS',
                         'node/nginx',
                         'node/mySQL'
@@ -96,7 +107,8 @@ module.exports = {
                     collapsable: true,
                     children: [
                         'http/http',
-                        'http/浏览器缓存'
+                        'http/浏览器缓存',
+                        'http/TCP&UDP'
                     ]
                 },
                 {

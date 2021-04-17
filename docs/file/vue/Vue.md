@@ -117,9 +117,9 @@
    // 安装
    // npm install compression --save
    // 逻辑代码
-   var compressiong = require('compressiong');
+   var compression = require('compression');
    var app = express();
-   app.use(compressiong())
+   app.use(compression())
 2. 开启http缓存
 3. CDN 的使用
 
