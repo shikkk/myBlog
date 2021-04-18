@@ -36,6 +36,7 @@ module.exports = {
                     title: 'Js',
                     collapsable: true,
                     children: [
+                        'js/websocket',
                         'js/call&apply&bind',
                         'js/原型原型链',
                         'js/同步异步',
