@@ -23,3 +23,5 @@ git push -f git@github.com:shikkk/shikkk.github.io.git master
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
 cd -
+
+rm -rf docs/.vuepress/dist
