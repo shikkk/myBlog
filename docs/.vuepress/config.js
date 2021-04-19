@@ -5,6 +5,9 @@ module.exports = {
     markdown: {
         lineNumbers: true
     },
+    plugins: [
+        "@vuepress/plugin-back-to-top"
+    ],
     themeConfig: {
         lastUpdated: "最后更新时间",
         nav: [
