@@ -63,10 +63,11 @@ module.exports = {
                         'vue/vue2使用',
                         'vue/vue3',
                         'vue/vue2生命周期',
+                        'vue/templateUse',
                        'vue/Vue',
                        'vue/数据双向绑定',
                         'vue/vDom',
-                        'vue/templateUse',
+                        'vue/$nextTick',
                         'vue/$set()',
                         'vue/routeUse',
                     ]
@@ -76,6 +77,7 @@ module.exports = {
                     collapsable: true,
                     children: [
                         'webpack/webpack',
+                        'webpack/Plugin',
                         'webpack/babel'
                     ]
                 },

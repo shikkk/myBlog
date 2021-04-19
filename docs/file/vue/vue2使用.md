@@ -94,6 +94,7 @@ EventBus.$off('aMsg', {})
 ## $nextTick
 * data改变后dom不会立刻渲染
 * nextTick解决数据更新后对最新dom操作的方法
+* [$nextTick源码解读](../vue/$nextTick.md)
 ```vue
 <template>
     <ul ref="ul1">
@@ -171,3 +172,5 @@ export default {
 }
 </script>
 ```
+
+
