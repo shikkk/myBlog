@@ -204,6 +204,21 @@ function patchVnode(oldVnode: VNode,vnode: VNode,insertedVnodeQueue: VNodeQueue)
 * `key`是为Vue中的vnode标记的唯一id,通过这个key,我们的diff操作可以更准确、更快速
 * diff算法的过程中,先会进行新旧节点的首尾交叉对比,当无法匹配的时候会用新节点的key与旧节点进行比对,然后超出差异
     * diff过程：oldCh和newCh各有两个头尾的变量StartIdx和EndIdx，它们的2个变量相互比较，一共有4种比较方式。如果4种比较都没匹配，如果设置了key，就会用key进行比较，在比较的过程中，变量会往中间靠，一旦StartIdx>EndIdx表明oldCh和newCh至少有一个已经遍历完了，就会结束比较,这四种比较方式就是首、尾、旧尾新头、旧头新尾.
+### vue中v-if和v-for不建议原因
+* v-for比v-if优先级高，所以使用的话，每次v-for都会执行v-if,造成不必要的计算，影响性能，尤其是当之需要渲染很小一部分的时候
+```js
+let template = `<div>
+                  <p v-if="a" v-for="key in obj"></p>
+                </div>`
+// with(this){
+//   return _c(
+//     'div',
+//     _l((obj),function(key){
+//       return (a)?_c('p'):_e()
+//     }),0)
+// }
+// _l循环函数里执行的三目运算判断，for循环优先级高于v-if
+```
 ## 模板编译
 * js的with语法
 * vue template complier将模板编译为render函数
