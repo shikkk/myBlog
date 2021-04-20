@@ -29,3 +29,5 @@ export default defineComponent({
 <img :src="$withBase('/images/vue/setup.jpg')">
 
 #### <font color=red>由于在执行setup 时尚未创建组件实例，因此在 setup 选项中没有 this</font>
+
+#### [Vue3官网](https://www.vue3js.cn/docs/zh/)

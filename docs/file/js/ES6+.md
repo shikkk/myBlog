@@ -205,3 +205,5 @@ const getValue = () => {
     2. 箭头函数不绑定`arguments`,而是...运算符接收
     3. 箭头函数的this指向上下文（window）任何方法都改变不了他的指向（如call，bind，apply），普通函数指向调用他的对象
     4. 箭头函数没有原型属性
+## 8.Set$Map
+ [Set$Map详细解读](./set&map.md)

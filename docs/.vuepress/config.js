@@ -44,6 +44,7 @@ module.exports = {
                         'js/原型原型链',
                         'js/同步异步',
                         'js/ES6+',
+                        'js/set&map',
                         'js/数组常用方法',
                         'js/数组扁平化',
                         'js/数组去重',
