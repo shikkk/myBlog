@@ -65,6 +65,7 @@ module.exports = {
                         'vue/vue3',
                         'vue/vue2生命周期',
                         'vue/templateUse',
+                        'vue/vuex',
                        'vue/Vue',
                        'vue/数据双向绑定',
                         'vue/vDom',
