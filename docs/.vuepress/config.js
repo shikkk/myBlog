@@ -39,6 +39,7 @@ module.exports = {
                     title: 'Js',
                     collapsable: true,
                     children: [
+                        'js/RegExp',
                         'js/websocket',
                         'js/call&apply&bind',
                         'js/原型原型链',
