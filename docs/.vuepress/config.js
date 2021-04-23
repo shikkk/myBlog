@@ -117,7 +117,8 @@ module.exports = {
                     children: [
                         'http/http',
                         'http/浏览器缓存',
-                        'http/TCP&UDP'
+                        'http/TCP&UDP',
+                        'http/xss.md'
                     ]
                 },
                 {
