@@ -13,7 +13,7 @@ module.exports = {
         nav: [
             { text: '首页', link: '/' },
             { text: '技术货架', link: '/file/' },
-            // { text: '货铺老板', link: '/me/' }
+            { text: '老板信息', link: '/me/' }
         ],
         sidebar: {
             '/file/': [
