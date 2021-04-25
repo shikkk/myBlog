@@ -15,7 +15,7 @@
 * 熟练使用前端 MVVM 框架 Vue.js，研究和学习其核心Api的实现原理。并了解其他框架如 React
 * 熟练使用 iView、ElementUi、Vant 和 Bootstrap 等UI框架
 * 熟练使用 echarts.js、D3.js 等可视化工具
-* 熟练使用 webpac k等自动化构建工具
+* 熟练使用 webpack 等自动化构建工具
 * 熟练使用 git、svn 等版本控制工具
 * 熟练使用 HTML、CSS 以及 JavaScript;
 * 熟悉使用 node.js 及其升级框架 Express、koa2
