@@ -39,6 +39,7 @@ module.exports = {
                     title: 'Js',
                     collapsable: true,
                     children: [
+                        'js/RAM',
                         'js/RegExp',
                         'js/websocket',
                         'js/call&apply&bind',
