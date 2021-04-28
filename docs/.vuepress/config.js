@@ -69,6 +69,7 @@ module.exports = {
                         'vue/templateUse',
                         'vue/vuex',
                        'vue/Vue',
+                        'vue/vueInit',
                        'vue/数据双向绑定',
                         'vue/vDom',
                         'vue/$nextTick',
