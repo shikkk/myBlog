@@ -200,6 +200,8 @@ function patchVnode(oldVnode: VNode,vnode: VNode,insertedVnodeQueue: VNodeQueue)
 }
 ```
 * `updateChildren` 函数，key节点对比核心
+
+新旧vnode都有children，那就做对比
 ```typescript
 function updateChildren (parentElm: Node,
     oldCh: VNode[],

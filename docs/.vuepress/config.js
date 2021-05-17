@@ -78,6 +78,13 @@ module.exports = {
                     ]
                 },
                 {
+                    title: 'React',
+                    collapsable: true,
+                    children: [
+                        'react/react'
+                    ]
+                },
+                {
                     title: 'Webpack',
                     collapsable: true,
                     children: [
