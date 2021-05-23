@@ -81,7 +81,8 @@ module.exports = {
                     title: 'React',
                     collapsable: true,
                     children: [
-                        'react/react'
+                        'react/react',
+                        'react/react-hook'
                     ]
                 },
                 {
