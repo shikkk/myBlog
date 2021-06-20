@@ -86,6 +86,13 @@ module.exports = {
                     ]
                 },
                 {
+                    title: 'TypeScript',
+                    collapsable: true,
+                    children: [
+                        'typeScript/typeScript'
+                    ]
+                },
+                {
                     title: 'Webpack',
                     collapsable: true,
                     children: [
