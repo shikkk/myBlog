@@ -89,7 +89,8 @@ module.exports = {
                     title: 'TypeScript',
                     collapsable: true,
                     children: [
-                        'typeScript/typeScript'
+                        'typeScript/typeScript',
+                        'typeScript/typeScript2'
                     ]
                 },
                 {
