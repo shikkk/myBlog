@@ -90,7 +90,8 @@ module.exports = {
                     collapsable: true,
                     children: [
                         'typeScript/typeScript',
-                        'typeScript/typeScript2'
+                        'typeScript/typeScript2',
+                        'typeScript/tsHigh'
                     ]
                 },
                 {
