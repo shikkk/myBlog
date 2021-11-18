@@ -45,6 +45,7 @@ export default {
 </script>
 ```
 ## 缓存组件（keep-alive）
+* [keep-alive源码解读](../vue/keepAlive.md)
 * 频繁切换不需要重复渲染的组件
 * 在组件切换过程中将状态保留在内存中，防止重复渲染DOM，减少加载时间及性能消耗，提高用户体验性
 * vue常见性能优化点
@@ -87,6 +88,7 @@ export default {
  }
 }
 ```
+
 ## 组件公共抽离（mixin）
 * 对个组件有相同的逻辑，抽离出来
 ```vue
