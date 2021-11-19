@@ -74,6 +74,7 @@ module.exports = {
                         'vue/$nextTick',
                         'vue/$set()',
                         'vue/vue.use',
+                        'vue/keepAlive',
                         'vue/vuex',
                         'vue/routeUse',
                     ]
