@@ -5,6 +5,7 @@ module.exports = {
     markdown: {
         lineNumbers: true
     },
+    // theme: 'reco',
     plugins: [
         "@vuepress/plugin-back-to-top"
     ],
@@ -32,7 +33,7 @@ module.exports = {
                         'HtmlAndCss/等比缩放',
                         'HtmlAndCss/水平垂直居中',
                         'HtmlAndCss/columnsAuto',
-                        'HtmlAndCss/flex布局',
+                        'HtmlAndCss/flexLayout',
                     ]
                 },
                 {
@@ -93,7 +94,8 @@ module.exports = {
                     children: [
                         'typeScript/typeScript',
                         'typeScript/typeScript2',
-                        'typeScript/tsHigh'
+                        'typeScript/tsHigh',
+                        'typeScript/tsType'
                     ]
                 },
                 {
