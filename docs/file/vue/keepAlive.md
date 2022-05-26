@@ -192,21 +192,3 @@ function pruneCacheEntry (
   remove(keys, key)
 }
 ```
-
-```js
-
-let arr = [
-    {
-        name: '111'
-    },
-    {
-        name: [
-            '222',
-            '333'
-        ]
-    },
-    {
-        name: '444'
-    },
-]
-```

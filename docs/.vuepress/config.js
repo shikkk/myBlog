@@ -64,7 +64,7 @@ module.exports = {
                     title: 'Vue',
                     collapsable: true,
                     children: [
-                        'vue/vue2使用',
+                        'vue/vue2Use',
                         'vue/vue3',
                         'vue/vue2生命周期',
                         'vue/templateUse',
