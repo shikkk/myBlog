@@ -40,6 +40,7 @@ module.exports = {
                     title: 'Js',
                     collapsable: true,
                     children: [
+                        'js/basic',
                         'js/RAM',
                         'js/RegExp',
                         'js/websocket',
